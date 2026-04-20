@@ -3,22 +3,39 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>tg-digests</title>
+<title>TG-дайджесты</title>
+<meta name="description" content="Ежедневные дайджесты Telegram-каналов про AI, стартапы и разработку.">
 <style>
-  :root { color-scheme: light dark; }
-  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
-         max-width: 640px; margin: 4rem auto; padding: 0 1.25rem; line-height: 1.55; }
-  h1 { font-weight: 600; letter-spacing: -0.01em; }
-  code { background: rgba(127,127,127,0.15); padding: 0.1em 0.35em; border-radius: 4px; font-size: 0.92em; }
-  .muted { opacity: 0.65; font-size: 0.9rem; }
+:root { color-scheme: light dark; --fg:#1a1a1a; --muted:#6b7280; --bg:#fafafa; --card:#fff; --border:#e5e7eb; --accent:#2563eb; --pill:#f3f4f6; }
+@media (prefers-color-scheme: dark) {
+  :root { --fg:#e5e7eb; --muted:#9ca3af; --bg:#0f1115; --card:#181b20; --border:#262a31; --accent:#60a5fa; --pill:#21252b; }
+}
+* { box-sizing: border-box; }
+body { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif; background:var(--bg); color:var(--fg); line-height:1.55; max-width:640px; margin:0 auto; padding:3rem 1.25rem 4rem; }
+h1 { font-size:1.8rem; font-weight:700; letter-spacing:-0.02em; margin:0 0 0.5rem; }
+.lead { color:var(--muted); margin:0 0 2rem; }
+.muted { color:var(--muted); }
+.feed { display:flex; flex-direction:column; gap:0.75rem; }
+a.card { display:block; background:var(--card); border:1px solid var(--border); border-radius:12px; padding:1rem 1.1rem; text-decoration:none; color:var(--fg); transition:border-color 0.15s, transform 0.15s; }
+a.card:hover { border-color:var(--accent); transform:translateY(-1px); }
+a.card .date { color:var(--muted); font-size:0.82rem; text-transform:uppercase; letter-spacing:0.04em; margin-bottom:0.2rem; }
+a.card .title { font-weight:600; font-size:1.02rem; margin-bottom:0.3rem; }
+a.card .meta { color:var(--muted); font-size:0.88rem; }
+footer { margin-top:3rem; color:var(--muted); font-size:0.8rem; text-align:center; }
+code { background:var(--pill); padding:0.1em 0.35em; border-radius:4px; font-size:0.9em; }
 </style>
 </head>
 <body>
-<h1>tg-digests</h1>
-<p>Здесь будут публиковаться дайджесты Telegram-каналов, собранные через
-<code>telegram-channel-parser</code> и опубликованные через
-<code>github-pages-publisher</code>.</p>
-<p>Каждый дайджест лежит по пути <code>/YYYY/YYYY-MM/&lt;slug&gt;/</code>.</p>
-<p class="muted">Пока пусто — это стартовая страница, чтобы включить GitHub Pages.</p>
+<h1>TG-дайджесты</h1>
+<p class="lead">Ежедневные сводки по Telegram-каналам про AI, стартапы и разработку.</p>
+
+<div class="feed">
+<a class="card" href="2026/2026-04/digest-2026-04-20/"><div class="date">20 апреля 2026</div><div class="title">TG-дайджест · 20 апреля 2026</div><div class="meta">49 постов · 23 каналов · <span class="muted">14 молчали</span></div></a>
+<a class="card" href="2026/2026-04/digest-2026-04-19/"><div class="date">19 апреля 2026</div><div class="title">TG-дайджест · 19 апреля 2026</div><div class="meta">44 постов · 22 каналов · <span class="muted">15 молчали</span></div></a>
+</div>
+
+<footer>
+  2 дайджестов · собрано через <code>telegram-channel-parser</code> + <code>github-pages-publisher</code> · обновлено 2026-04-21 01:19
+</footer>
 </body>
 </html>
